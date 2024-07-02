@@ -47,9 +47,9 @@ def build_model(input_shape):
 
 # 特徴の取得
 mfcc, zcr, spectral_flux, f0 = extract_features('stutter-i-love-you-82913.wav')
-spectral_flux_reshaped = np.expand_dims(spectral_flux, axis=0)  
+spectral_flux_reshaped = np.expand_dims(spectral_flux, axis=0)
 
-f0_reshaped = np.expand_dims(f0, axis=0) 
+f0_reshaped = np.expand_dims(f0, axis=0)
 print(f0_reshaped)
 # 特徴の結合と前処理
 features = np.concatenate([mfcc, zcr, spectral_flux_reshaped, f0_reshaped], axis=0)
